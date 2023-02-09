@@ -1,0 +1,149 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  body{
+  background-color: hsl(185, 75%, 39%);
+  overflow: hidden;
+  }
+  main{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container{
+    background-color: white;
+    max-width: 350px;
+    border-radius: 15px;
+    box-shadow: 0px 7px 14px 0px hsl(229deg 23% 23% / 55%);
+  }
+
+  .statistics{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    padding: 20px;
+    gap: 0px 20px;
+  }
+  #photo{
+    position: absolute;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-bottom: 20px;
+  }
+  .information{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+  }
+  .information p{
+    padding: 30px 90px;
+    text-align: center;
+    color: hsl(227, 10%, 46%);
+    font-family: 'Kumbh Sans',sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+  }
+
+  #pattern{
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    padding-bottom: 30px;
+  }
+
+  .nub{
+    font-size: 1em;
+    font-family: 'Kumbh Sans',sans-serif;
+    color: hsl(229, 23%, 23%);
+    font-weight: 700;
+  }
+  
+  .nom{
+    font-size: 0.7em;
+    font-family: 'Kumbh Sans' ,sans-serif;
+    color: hsl(227, 10%, 46%);
+    font-weight: 400;
+    letter-spacing: 0.1em;
+  }
+  hr{
+    background-color: hsl(0, 0%, 59%);
+    opacity: 30%;
+  }
+  .details::first-line{
+    font-size: 1em;
+    font-weight: 700;
+    font-family:'Kumbh Sans',sans-serif ;
+    color: hsl(229, 23%, 23%);
+  }
+
+  .background-top{
+    top: -65%;
+    left: -15%;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .background-bottom{
+    position: absolute;
+    z-index: -1;
+    top: 55%;
+    right: -10%
+  }
+  span{
+    font-size: 1em;
+    color: hsl(227, 10%, 46%);
+    font-weight: 400;
+    padding-left: 5px;
+}
+.details p{
+  color: hsl(227, 10%, 46%);
+  font-family: 'Kumbh Sans',sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+}
