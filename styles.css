@@ -45,21 +45,87 @@
     isolation: isolate;
   }
 
+  :root{
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+    --white: #fff;
+    --shadow-color: hsla(229, 23%, 23%, 0.549);
+  }
+
   body{
-  background-color: hsl(185, 75%, 39%);
+  background-color: var(--Dark-cyan);
+  font-family: 'Kumbh Sans',sans-serif;
   overflow: hidden;
   }
+
   main{
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
   .container{
-    background-color: white;
+    background-color: var(--white);
     max-width: 350px;
     border-radius: 15px;
-    box-shadow: 0px 7px 14px 0px hsl(229deg 23% 23% / 55%);
+    box-shadow: 0px 7px 14px 0px var(--shadow-color);
+  }
+
+  .information{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+  }
+  
+  /*Victor 26 London*/
+  .information p{
+    padding: 30px 90px;
+    text-align: center;
+    color: var(--Dark-grayish-blue);
+    font-weight: 400;
+    font-size: 1em;
+  }
+
+  /*London*/
+  .details p{
+    color: var(--Dark-grayish-blue);
+    font-weight: 400;
+    font-size: 1em;
+  }
+
+  /*Victor Crest*/
+  .details::first-line{
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--Very-dark-desaturated-blue);
+  }
+
+    /*26*/
+  span{
+    font-size: 1em;
+    color: var(--Dark-grayish-blue);
+    font-weight: 400;
+    padding-left: 5px;
+  }
+
+  /*image of Victor*/
+  #photo{
+    position: absolute;
+    border-radius: 50%;
+    border: 5px solid var(--white);
+    margin-bottom: 20px;
+  }
+
+  /*pattern of the container*/
+  #pattern{
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    padding-bottom: 30px;
   }
 
   .statistics{
@@ -69,57 +135,25 @@
     padding: 20px;
     gap: 0px 20px;
   }
-  #photo{
-    position: absolute;
-    border-radius: 50%;
-    border: 5px solid white;
-    margin-bottom: 20px;
-  }
-  .information{
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-  }
-  .information p{
-    padding: 30px 90px;
-    text-align: center;
-    color: hsl(227, 10%, 46%);
-    font-family: 'Kumbh Sans',sans-serif;
-    font-weight: 400;
-    font-size: 1em;
-  }
 
-  #pattern{
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    padding-bottom: 30px;
-  }
-
+  /*Numbers*/
   .nub{
     font-size: 1em;
-    font-family: 'Kumbh Sans',sans-serif;
     color: hsl(229, 23%, 23%);
     font-weight: 700;
   }
-  
+
+  /*Names of statistics*/
   .nom{
     font-size: 0.7em;
-    font-family: 'Kumbh Sans' ,sans-serif;
-    color: hsl(227, 10%, 46%);
+    color: var(--Dark-grayish-blue);
     font-weight: 400;
     letter-spacing: 0.1em;
   }
+
   hr{
-    background-color: hsl(0, 0%, 59%);
+    background-color: var(--Dark-grayish-blue);
     opacity: 30%;
-  }
-  .details::first-line{
-    font-size: 1em;
-    font-weight: 700;
-    font-family:'Kumbh Sans',sans-serif ;
-    color: hsl(229, 23%, 23%);
   }
 
   .background-top{
@@ -135,15 +169,10 @@
     top: 55%;
     right: -10%
   }
-  span{
-    font-size: 1em;
-    color: hsl(227, 10%, 46%);
-    font-weight: 400;
-    padding-left: 5px;
-}
-.details p{
-  color: hsl(227, 10%, 46%);
-  font-family: 'Kumbh Sans',sans-serif;
-  font-weight: 400;
-  font-size: 1em;
-}
+
+  /*For Phones*/
+  @media screen and (max-width:376px) {
+    .container{
+      max-width: 300px;
+    }
+  }
