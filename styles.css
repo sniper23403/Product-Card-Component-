@@ -69,8 +69,8 @@
 
   .container{
     background-color: var(--white);
-    max-width: 350px;
-    border-radius: 15px;
+    max-width: 21.875em;
+    border-radius: 0.9375em;
     box-shadow: 0px 7px 14px 0px var(--shadow-color);
   }
 
@@ -78,31 +78,20 @@
     display: grid;
     align-items: center;
     justify-items: center;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-  }
-  
-  /*Victor 26 London*/
-  .information p{
-    padding: 30px 90px;
-    text-align: center;
-    color: var(--Dark-grayish-blue);
-    font-weight: 400;
-    font-size: 1em;
-  }
-
-  /*London*/
-  .details p{
-    color: var(--Dark-grayish-blue);
-    font-weight: 400;
-    font-size: 1em;
+    border-top-right-radius: 0.9375em;
+    border-top-left-radius: 0.9375em;
   }
 
   /*Victor Crest*/
-  .details::first-line{
-    font-size: 1em;
-    font-weight: 700;
-    color: var(--Very-dark-desaturated-blue);
+  .information strong{
+    margin-bottom: 0.3em;
+    margin-top: 1.875em;
+  }
+
+  /*London*/
+  .information small{
+    padding-bottom: 2em;
+    font-size: 0.8rem;
   }
 
     /*26*/
@@ -110,7 +99,7 @@
     font-size: 1em;
     color: var(--Dark-grayish-blue);
     font-weight: 400;
-    padding-left: 5px;
+    padding-left: 0.3125em;
   }
 
   /*image of Victor*/
@@ -118,33 +107,31 @@
     position: absolute;
     border-radius: 50%;
     border: 5px solid var(--white);
-    margin-bottom: 20px;
   }
 
   /*pattern of the container*/
   #pattern{
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    padding-bottom: 30px;
+    border-top-right-radius: 0.938em;
+    border-top-left-radius: 0.938em;
+    padding-bottom: 1.875em;
   }
 
   .statistics{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
-    padding: 20px;
-    gap: 0px 20px;
+    padding: 1.25em 1.875em ;
   }
 
   /*Numbers*/
-  .nub{
+  strong{
     font-size: 1em;
-    color: hsl(229, 23%, 23%);
+    color: var(--Very-dark-desaturated-blue);
     font-weight: 700;
   }
 
   /*Names of statistics*/
-  .nom{
+  small{
     font-size: 0.7em;
     color: var(--Dark-grayish-blue);
     font-weight: 400;
@@ -173,6 +160,6 @@
   /*For Phones*/
   @media screen and (max-width:376px) {
     .container{
-      max-width: 300px;
+      max-width: 18.75em;
     }
   }
